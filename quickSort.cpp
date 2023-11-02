@@ -21,12 +21,12 @@ int partitionFunction(int arr[], int low, int high){
     return j;
     
 }
-void QuickSort(int arr[], int low, int high){
+void quickSort(int arr[], int low, int high){
     int pivot;
     if(low>=high) return;
     pivot=partitionFunction(arr, low, high);
-    QuickSort(arr, low, pivot-1);
-    QuickSort(arr, pivot+1, high);
+    quickSort(arr, low, pivot-1);
+    quickSort(arr, pivot+1, high);
 }
 
 int main()
@@ -37,7 +37,7 @@ int main()
     for(int i=0; i<n; i++){
         cin >> arr[i];
     }
-    QuickSort(arr, 0, n-1);
+    quickSort(arr, 0, n-1);
     for(auto i: arr){
         cout << i<< " ";
     }
